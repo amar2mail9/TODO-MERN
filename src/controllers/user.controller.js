@@ -206,8 +206,8 @@ export const userLoginWithPasswords = async (req, res) => {
             }
             if (token) {
               await loginSuccessSender(
-                user.email,
-                user.fullname.toLocaleLowerCase()
+                existUser.email,
+                existUser.fullname.toLocaleLowerCase()
               );
               return res.status(200).send({
                 success: true,

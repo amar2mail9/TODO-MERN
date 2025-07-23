@@ -19,7 +19,7 @@ export const otpSender = async (otp, userEmail, name) => {
     <div style="background-color: #f4f4f4; padding: 40px 0; font-family: Arial, sans-serif;">
       <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);">
         <div style="text-align: center; padding-bottom: 20px;">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn8ETQ-Y8VvjmAJy_E8lFYkYzQID8hVJU4vQ&s" alt="Polytechub" width="100" style="margin-bottom: 10px;" />
+          <img src="https://polytechub.vercel.app/logo.png" alt="Polytechub" width="100" style="margin-bottom: 10px;" />
           <h1 style="font-size: 24px; color: #007bff; margin: 0;">Polytechub</h1>
           <p style="color: #999; font-size: 14px;">Smart solutions, built by you.</p>
         </div>
@@ -67,7 +67,7 @@ export const welcomeSender = async (userEmail, name) => {
       <div style="max-width: 600px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);">
         
         <div style="text-align: center;">
-          <img src="https://polytechub.vercel.app/logo192.png" alt="Polytechub Logo" width="70" style="margin-bottom: 10px;" />
+          <img src="https://polytechub.vercel.app/logo.png" alt="Polytechub Logo" width="70" style="margin-bottom: 10px;" />
           <h1 style="color: #007bff; font-size: 28px; margin: 0;">Welcome to Polytechub</h1>
           <p style="color: #666; font-size: 14px;">Where innovation meets code</p>
         </div>
