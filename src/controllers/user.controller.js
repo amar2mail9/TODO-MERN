@@ -169,7 +169,7 @@ export const resendOpt = async (req, res) => {
   }
 };
 
-// ✅ Login user
+// Login user
 
 export const userLoginWithPasswords = async (req, res) => {
   try {
@@ -264,57 +264,7 @@ export const loginWithOTP = async (req, res) => {
       });
     }
 
-    // if (existUser) {
-    //   existUser.otp = otpGenerate();
-    //   await existUser.save();
-    //   await otpSender(existUser.otp, existUser.email, existUser.fullname);
-
-    //   setTimeout(async () => {
-    //     const u = await userModel.findOne({ email });
-    //     if (u && !u.isVerified) {
-    //       u.otp = null;
-    //       await u.save();
-    //     }
-    //   }, 1000 * 60 * 5);
-
-    //   if (existUser.otp !== otp) {
-    //     return res.status(404).send({
-    //       success: false,
-    //       error: "Invalid OTP",
-    //     });
-    //   }
-    //   if (existUser.otp === otp) {
-    //     jwt.sign(
-    //       { _id: existUser._id },
-    //       process.env.PRIVATEKEY,
-    //       {
-    //         expiresIn: "1d",
-    //       },
-    //       (err, token) => {
-    //         if (err) {
-    //           return res.status(400).send({
-    //             success: false,
-    //             error: err,
-    //           });
-    //         }
-
-    //         if (token) {
-    //           return res.status(200).send({
-    //             success: true,
-    //             message: "Login Successfully",
-    //             accessToken: token,
-    //             user: {
-    //               userId: existUser._id,
-    //               fullname: existUser.fullname.toLocaleUpperCase(),
-    //               username: existUser.username,
-    //               email: existUser.email,
-    //             },
-    //           });
-    //         }
-    //       }
-    //     );
-    //   }
-    // }
+    
   } catch (error) {
     return res.status(500).send({
       success: false,

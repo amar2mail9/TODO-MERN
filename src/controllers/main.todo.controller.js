@@ -1,7 +1,7 @@
 import slugify from "slugify";
 import { MainTodo } from "../models/main_todo.model.js";
 
-// ✅ CREATE
+// CREATE
 export const createMainTodo = async (req, res) => {
   try {
     const { title, color, textColor } = req.body;
@@ -37,7 +37,7 @@ export const createMainTodo = async (req, res) => {
   }
 };
 
-// ✅ READ ALL
+//  READ ALL
 export const getAllMainTodo = async (req, res) => {
   try {
     const user = req.user;
@@ -51,7 +51,7 @@ export const getAllMainTodo = async (req, res) => {
   }
 };
 
-// ✅ READ SINGLE
+//  READ SINGLE
 export const getSingleMainTodo = async (req, res) => {
   try {
     const todo = await MainTodo.findById(req.params.id);
@@ -64,15 +64,15 @@ export const getSingleMainTodo = async (req, res) => {
   }
 };
 
-// ✅ UPDATE
+// UPDATE
 export const updateMainTodo = async (req, res) => {
   try {
     const { title, color, textColor } = req.body;
-    const updated = await MainTodo.findByIdAndUpdate(
-      req.params.id,
-      { title, color, textColor },
-      { new: true }
-    );
+    const updated = await MainTodo.findByIdAndUpdate(req.params.id, {
+      title,
+      color,
+      textColor,
+    });
     if (!updated)
       return res.status(404).json({ success: false, error: "Not found" });
 
@@ -82,7 +82,7 @@ export const updateMainTodo = async (req, res) => {
   }
 };
 
-// ✅ DELETE
+// DELETE
 export const deleteMainTodo = async (req, res) => {
   try {
     const deleted = await MainTodo.findByIdAndDelete(req.params.id);

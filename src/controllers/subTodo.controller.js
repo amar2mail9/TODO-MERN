@@ -125,7 +125,7 @@ export const editSubTodo = async (req, res) => {
     const updatedTodo = await SubTodo.findByIdAndUpdate(
       id,
       { taskName, description, color, textColor, complete },
-      { new: true } // return updated document
+  
     );
 
     if (!updatedTodo) {
