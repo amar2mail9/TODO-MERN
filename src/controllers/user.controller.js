@@ -263,8 +263,6 @@ export const loginWithOTP = async (req, res) => {
         error: "Create new Account",
       });
     }
-
-    
   } catch (error) {
     return res.status(500).send({
       success: false,
@@ -338,7 +336,7 @@ export const verifyLoginOTP = async (req, res) => {
   } catch (error) {
     return res.status(404).send({
       success: false,
-      error: "Create new Account",
+      error: error.messages,
     });
   }
 };
